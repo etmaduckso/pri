@@ -5,7 +5,7 @@ import "./styles.css";
 export default function App() {
 
 
-  const [Books,setBook] = useState("");
+  const [book,setBook] = useState("");
   const [result,setResult] = useState([]);
   const [apiKey,setApiKey] = useState("AIzaSyAk6-GfKEDjnsCIp0vrK3psAt_vrSKb61E");
   
