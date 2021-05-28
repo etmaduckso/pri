@@ -19,7 +19,7 @@ export default function App() {
   function handleSubmit(event){
   
     event.preventDefault();
-      Axios.get("https://www.googleapis.com/books/v1/volumes?q="+book+"&key="+apiKey+"&maxResults=20").then(data => {
+      Axios.get("https://www.googleapis.com/books/v1/volumes?q="+book+"&key="+apiKey+"&maxResults=30").then(data => {
       console.log(data.data.items);
       setResult(data.data.items);
       })
