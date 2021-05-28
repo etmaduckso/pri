@@ -47,8 +47,10 @@ export default function App() {
         </button>
       </form>
 
-      {result.map(book =>(
+      {result.map(book => (
+        <a target="blank" href={book.volumesInfo.previewLink}>
 <image src={book.volumesInfo.imageLinks.thumbnail} alt={book.title}/>
+</a>
       ))}
     </div>
   );
