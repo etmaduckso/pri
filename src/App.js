@@ -20,7 +20,8 @@ export default function App() {
   
     event.preventDefault();
       Axios.get("https://www.googleapis.com/books/v1/volumes?q="+book+"&key="+apiKey+"&maxResults=40").then(data => {
-console.log(data);
+      console.log(data.data.items);
+      setResult(data.data.items);
       })
   }
   
