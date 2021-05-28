@@ -7,7 +7,7 @@ export default function App() {
 
   const [book,setBook] = useState("");
   const [result,setResult] = useState([]);
-  const [apiKey,setApiKey] = useState("AIzaSyAk6-GfKEDjnsCIp0vrK3psAt_vrSKb61E");
+  const [apiKey,setApiKey] = useState("AIzaSyBd9H4JeRLdn_QE28OduTsOfCNJdJ19IM0");
   
   
   function handleChange(event){
@@ -19,7 +19,7 @@ export default function App() {
   function handleSubmit(event){
   
     event.preventDefault();
-      Axios.get("https://www.googleapis.com/books/v1/volumes?q="+book+"&key="+apiKey+"&maxResults=40").then(data => {
+      Axios.get("https://www.googleapis.com/books/v1/volumes?q="+book+"&key="+apiKey+"&maxResults=20").then(data => {
       console.log(data.data.items);
       setResult(data.data.items);
       })
